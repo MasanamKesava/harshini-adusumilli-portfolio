@@ -6,12 +6,14 @@ import Skills from "@/components/Skills";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import MovingCircles from "@/components/MovingCircles";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <MovingCircles />
       <Navigation />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <About />
         <Experience />

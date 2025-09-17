@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Download } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,23 +62,31 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
-            <Button variant="outline" size="sm" className="ml-4">
-              <Download className="w-4 h-4 mr-2" />
-              Resume
-            </Button>
+            <div className="flex items-center gap-3 ml-4">
+              <ThemeToggle />
+              <Button variant="outline" size="sm">
+                <Download className="w-4 h-4 mr-2" />
+                <a href="/harshini_resume.pdf" download="Harshini_Adusumilli_Resume.pdf">
+                  Resume
+                </a>
+              </Button>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
-          >
-            {isOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-lg hover:bg-muted transition-colors"
+            >
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -95,7 +104,9 @@ const Navigation = () => {
               ))}
               <Button variant="outline" size="sm" className="self-start mt-2">
                 <Download className="w-4 h-4 mr-2" />
-                Resume
+                <a href="/harshini_resume.pdf" download="Harshini_Adusumilli_Resume.pdf">
+                  Resume
+                </a>
               </Button>
             </div>
           </div>

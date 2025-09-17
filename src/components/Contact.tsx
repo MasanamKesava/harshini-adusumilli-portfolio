@@ -26,7 +26,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="font-medium text-foreground">Email</div>
-                    <div className="text-muted-foreground">harshini.adusumilli@email.com</div>
+                    <div className="text-muted-foreground">harshidolly2812@gmail.com</div>
                   </div>
                 </div>
 
@@ -37,6 +37,16 @@ const Contact = () => {
                   <div>
                     <div className="font-medium text-foreground">Location</div>
                     <div className="text-muted-foreground">United States (Remote)</div>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-primary-foreground" />
+                  </div>
+                  <div>
+                    <div className="font-medium text-foreground">Phone</div>
+                    <div className="text-muted-foreground">(469) 290-2940</div>
                   </div>
                 </div>
 
@@ -131,11 +141,15 @@ const Contact = () => {
           <div className="flex justify-center gap-6">
             <Button variant="outline" size="lg" className="hover-lift">
               <Linkedin className="w-5 h-5 mr-2" />
-              LinkedIn Profile
+              <a href="https://www.linkedin.com/in/harshini-adusumilli-a393161b4/" target="_blank" rel="noopener noreferrer">
+                LinkedIn Profile
+              </a>
             </Button>
             <Button variant="outline" size="lg" className="hover-lift">
               <Mail className="w-5 h-5 mr-2" />
-              Email Resume
+              <a href="mailto:harshidolly2812@gmail.com">
+                Email Resume
+              </a>
             </Button>
           </div>
         </div>
