@@ -7,6 +7,7 @@ import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import MovingCircles from "@/components/MovingCircles";
+import CV from "@/assets/harshini_resume.pdf"; // Import PDF
 
 const Index = () => {
   return (
