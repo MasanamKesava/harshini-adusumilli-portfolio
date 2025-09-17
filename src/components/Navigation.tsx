@@ -67,7 +67,13 @@ const Navigation = () => {
               <ThemeToggle />
               <Button variant="outline" size="sm">
                 <Download className="w-4 h-4 mr-2" />
-                <a href="/harshini_resume.pdf" download="Harshini_Adusumilli_Resume.pdf">
+                <Button variant="outline" size="sm">
+  <Download className="w-4 h-4 mr-2" />
+  <a href={CV} download="Harshini_Adusumilli_Resume.pdf">
+    Resume
+  </a>
+</Button>
+
                   Resume
                 </a>
               </Button>
