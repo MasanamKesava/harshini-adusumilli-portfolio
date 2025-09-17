@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Download } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import CV from "@/assets/harshini_resume.pdf"; // Import PDF
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
