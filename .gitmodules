@@ -1,0 +1,4 @@
+[submodule "harshini-adusumilli-portfolio"]
+	path = harshini-adusumilli-portfolio
+	url = https://github.com/<owner>/<repo>.git
+	branch = main
