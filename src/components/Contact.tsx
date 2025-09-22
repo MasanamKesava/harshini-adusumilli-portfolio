@@ -11,14 +11,17 @@ const Contact = () => {
         <div className="text-center mb-16">
           <h2 className="mb-4">Get In Touch</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Open to discussing opportunities in Senior .NET Developer, Full Stack Engineer, and Software Engineer roles
+            Open to discussing opportunities in Senior .NET Developer, Full
+            Stack Engineer, and Software Engineer roles
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-foreground mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-semibold text-foreground mb-6">
+                Contact Information
+              </h3>
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center">
@@ -26,7 +29,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="font-medium text-foreground">Email</div>
-                    <div className="text-muted-foreground">harshidolly2812@gmail.com</div>
+                    <div className="text-muted-foreground">
+                      harshidolly2812@gmail.com
+                    </div>
                   </div>
                 </div>
 
@@ -36,7 +41,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="font-medium text-foreground">Location</div>
-                    <div className="text-muted-foreground">United States (Remote)</div>
+                    <div className="text-muted-foreground">
+                      United States (Remote)
+                    </div>
                   </div>
                 </div>
 
@@ -56,7 +63,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="font-medium text-foreground">LinkedIn</div>
-                    <div className="text-muted-foreground">500+ connections</div>
+                    <div className="text-muted-foreground">
+                      500+ connections
+                    </div>
                   </div>
                 </div>
               </div>
@@ -64,17 +73,19 @@ const Contact = () => {
 
             <Card className="hover-lift">
               <CardContent className="p-6">
-                <h4 className="text-lg font-semibold text-foreground mb-4">Open to Work</h4>
+                <h4 className="text-lg font-semibold text-foreground mb-4">
+                  Open to Work
+                </h4>
                 <p className="text-muted-foreground mb-4">
                   Currently seeking opportunities in:
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {[
                     "Senior .NET Developer",
-                    "Full Stack Engineer", 
+                    "Full Stack Engineer",
                     ".NET Developer",
                     "Web Developer",
-                    "Software Engineer"
+                    "Software Engineer",
                   ].map((role, index) => (
                     <span key={index} className="skill-tag">
                       {role}
@@ -87,20 +98,37 @@ const Contact = () => {
 
           <Card className="hover-lift">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-semibold text-foreground mb-6">Send a Message</h3>
-              <form className="space-y-6">
+              <h3 className="text-2xl font-semibold text-foreground mb-6">
+                Send a Message
+              </h3>
+              <form
+                className="space-y-6"
+                action="https://formsubmit.co/kesavamasanam@gmail.com"
+                method="POST"
+              >
+                {/* disable reCAPTCHA */}
+                <input type="hidden" name="_captcha" value="false" />
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
                       First Name
                     </label>
-                    <Input placeholder="Your first name" />
+                    <Input
+                      placeholder="Your first name"
+                      name="firstName"
+                      required
+                    />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Last Name
                     </label>
-                    <Input placeholder="Your last name" />
+                    <Input
+                      placeholder="Your last name"
+                      name="lastName"
+                      required
+                    />
                   </div>
                 </div>
 
@@ -108,49 +136,63 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Email
                   </label>
-                  <Input type="email" placeholder="your.email@company.com" />
+                  <Input
+                    type="email"
+                    placeholder="your.email@company.com"
+                    name="email"
+                    required
+                  />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Company
                   </label>
-                  <Input placeholder="Your company name" />
+                  <Input placeholder="Your company name" name="company" />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Message
                   </label>
-                  <Textarea 
+                  <Textarea
                     placeholder="Tell me about the opportunity or project you'd like to discuss..."
                     rows={5}
+                    name="message"
+                    required
                   />
                 </div>
 
-                <Button className="w-full" variant="hero" size="lg">
+                <Button
+                  className="w-full"
+                  variant="hero"
+                  size="lg"
+                  type="submit"
+                >
                   <Send className="w-5 h-5 mr-2" />
                   Send Message
                 </Button>
               </form>
             </CardContent>
           </Card>
-        </div>
 
-        <div className="mt-16 text-center">
-          <div className="flex justify-center gap-6">
-            <Button variant="outline" size="lg" className="hover-lift">
-              <Linkedin className="w-5 h-5 mr-2" />
-              <a href="https://www.linkedin.com/in/harshini-adusumilli-a393161b4/" target="_blank" rel="noopener noreferrer">
-                LinkedIn Profile
-              </a>
-            </Button>
-            <Button variant="outline" size="lg" className="hover-lift">
-              <Mail className="w-5 h-5 mr-2" />
-              <a href="mailto:harshidolly2812@gmail.com">
-                Email Resume
-              </a>
-            </Button>
+          <div className="mt-16 text-center">
+            <div className="flex justify-center gap-6">
+              <Button variant="outline" size="lg" className="hover-lift">
+                <Linkedin className="w-5 h-5 mr-2" />
+                <a
+                  href="https://www.linkedin.com/in/harshini-adusumilli-a393161b4/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn Profile
+                </a>
+              </Button>
+              <Button variant="outline" size="lg" className="hover-lift">
+                <Mail className="w-5 h-5 mr-2" />
+                <a href="mailto:harshidolly2812@gmail.com">Email Resume</a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
